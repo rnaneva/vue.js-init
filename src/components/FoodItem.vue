@@ -2,47 +2,27 @@
     <div>
         <h2>
             {{ foodName }}
-            <img src="/img_quality.svg" v-show="isFavourite">
+            <img src="/img_quality.svg" v-show="foodIsFavorite">
         </h2>
-        <p>{{ foodDesc }}</p>
-     
+        <p> {{ foodDesc }}</p>
+        <button v-on:click="toggeFavourite">Favourite</button>
+        
     </div>
 </template>
 <script>
 export default{
-     // props: ['foodName','foodDesc','isFavorite']
-  props: {
-    foodName: {
-        type: String,
-        required: true
-  },
-    foodDesc: {
-        type: String,
-        required: false,
-        default:  'This is the default description.',
-        validator: function(value){
-            if(20 < value.length && value.length < 40){
-                return true;
-            } else {
-                return false;
-            }
-        }
-    },
-    isFavourite: {
-        type: Boolean,
-        required: false,
-        default: false
-    } 
-  },
+   
+  props:['foodName', 'foodDesc', 'isFavourite'],
   data(){
-    return {
-        foodIsFavourite: this.isFavourite
+    return{
+       foodIsFavorite:this.isFavourite
     }
   },
   methods: {
-    toggleFavourite(){
-        this.foodIsFavourite = !this.foodIsFavourite;
-    }
+       toggeFavourite(){
+          this.foodIsFavorite = !this.foodIsFavorite
+        },
+    
   }
 }
 </script>
@@ -51,7 +31,7 @@ export default{
     font-weight: bold ;
     color: rgb(144, 12, 12);
   }
-  img{
+  img{  
     height:1.5em;
     float: right;
   }
