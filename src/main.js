@@ -1,8 +1,8 @@
 
 import { createApp } from 'vue'
-import App from './App1.vue'
-import TodoItem from './components/TodoItem.vue'
+import App from './App4.vue'
+import Slot from './components/Slot.vue'
 
 const app = createApp(App);
-app.component('todo-item', TodoItem)
+app.component('slot-comp', Slot)
 app.mount('#app')
