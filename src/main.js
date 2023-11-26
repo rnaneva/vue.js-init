@@ -1,10 +1,6 @@
 
 import { createApp } from 'vue'
-import App from './App5.vue'
-import CompOne from './components/CompOne.vue'
-import CompTwo from './components/CompTwo.vue'
+import App from './App7.vue'
 
-const app = createApp(App);
-app.component('comp-one', CompOne)
-app.component('comp-two', CompTwo)
+const app = createApp(App)
 app.mount('#app')
