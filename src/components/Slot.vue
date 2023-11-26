@@ -2,7 +2,7 @@
     <slot
     v-for="x in foods"
     :key="x"
-    :foodName="x">
+    :foodName="x"> 
     </slot>
 </template>
 

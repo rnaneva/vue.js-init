@@ -1,10 +1,14 @@
 <template>
-    <div class="compTwoDiv">
-        <p>CompTwo.vue</p>
-        <comp-one />
+    <div >
+        <h2>Two!</h2>
+        <p>This is component two.</p>
     </div>
 </template>
 
 <script></script>
 
-<style></style>    
+<style scoped>
+    div {
+        background-color:pink;
+    }
+</style>    

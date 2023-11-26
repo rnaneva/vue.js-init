@@ -1,8 +1,10 @@
 
 import { createApp } from 'vue'
-import App from './App4.vue'
-import Slot from './components/Slot.vue'
+import App from './App5.vue'
+import CompOne from './components/CompOne.vue'
+import CompTwo from './components/CompTwo.vue'
 
 const app = createApp(App);
-app.component('slot-comp', Slot)
+app.component('comp-one', CompOne)
+app.component('comp-two', CompTwo)
 app.mount('#app')
